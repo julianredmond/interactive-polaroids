@@ -12,34 +12,43 @@ html {
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
+  position: absolute;
+  transition: all 1s linear;
 }
 
 .polaroid:hover {
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 1);
+  position: relative;
 }
 
 .polaroid:first-child {
   transform: translate(10em, 5em) rotate(-10deg);
+  position: relative;
 }
 
 .polaroid:first-child:hover {
   z-index: 1;
-  position: relative;
+  transform: translate(10em, 5em) rotate(0deg);
 }
 
 .polaroid:nth-child(even) {
   transform: translate(15em, 0) rotate(5deg);
-  z-index: 1;
   position: relative;
+}
+
+.polaroid:nth-child(even):hover {
+  z-index: 1;
+  transform: translate(15em, 0) rotate(0deg);
 }
 
 .polaroid:last-child {
   transform: translate(22em, -15em) rotate(15deg);
+  position: relative;
 }
 
 .polaroid:last-child:hover {
   z-index: 1;
-  position: relative;
+  transform: translate(22em, -15em) rotate(0deg);
 }
 
 .polaroid > img {
